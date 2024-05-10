@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native';
-import React from 'react';
-
+import React, { useState } from 'react';
+import { router } from 'expo-router';
+import { ChannelList } from 'stream-chat-expo';
+import { Channel as ChannelType, StreamChat } from 'stream-chat';
 export default function MainTabScreen() {
 	return (
-		<View>
-			<Text>MainTabScreen</Text>
-		</View>
+		<ChannelList
+			onSelect={(channel) => router.push(`/channel/${channel.cid}`)}
+		/>
 	);
 }
