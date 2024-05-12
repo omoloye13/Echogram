@@ -27,13 +27,17 @@ const ChannelScreen = () => {
 	}, [cid]);
 
 	if (!channel) {
-		return <ActivityIndicator />;
+		return (
+			<ActivityIndicator
+				style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+			/>
+		);
 	}
 
 	return (
 		<Channel channel={channel}>
 			<MessageList />
-			<SafeAreaView edges={['bottom']}>
+			<SafeAreaView>
 				<MessageInput />
 			</SafeAreaView>
 		</Channel>
