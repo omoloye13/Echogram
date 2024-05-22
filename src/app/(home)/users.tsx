@@ -7,7 +7,11 @@ import UserListItem from '../../components/UserListItem';
 export default function UsersScreen() {
 	const [users, setUsers] = useState([]);
 	const { user } = useAuth();
-	console.log('SHO ME', user.email);
+	// const { profile } = useAuth();
+
+	// console.log('SHO ME', user.email);
+	// console.log('show my ', profile.full_name);
+	// console.log('list o users are', users);
 
 	useEffect(() => {
 		const fetchUsers = async () => {
@@ -19,6 +23,7 @@ export default function UsersScreen() {
 			setUsers(profiles);
 		};
 		fetchUsers();
+		// console.log('I need list of users', users);
 	}, []);
 
 	return (

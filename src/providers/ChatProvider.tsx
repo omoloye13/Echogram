@@ -11,6 +11,7 @@ const client = StreamChat.getInstance(process.env.EXPO_PUBLIC_STREAM_API_KEY);
 const ChatProvider = ({ children }: PropsWithChildren) => {
 	const [isConnected, setIsConnnected] = useState(false);
 	const { profile } = useAuth();
+	// console.log(profile);
 
 	useEffect(() => {
 		if (!profile) {

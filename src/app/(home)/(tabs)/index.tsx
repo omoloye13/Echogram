@@ -17,7 +17,7 @@ export default function MainTabScreen() {
 								name='users'
 								size={22}
 								color='black'
-								style={{ marginHorizontal: 15 }}
+								style={{ marginHorizontal: 25 }}
 							/>
 						</Link>
 					),

@@ -4,7 +4,7 @@ import React from 'react';
 const UserListItem = ({ user }) => {
 	return (
 		<View style={{ padding: 15, backgroundColor: 'white' }}>
-			<Text style={{ fontWeight: '600' }}>{user.email}</Text>
+			<Text style={{ fontWeight: '600' }}>{user.full_name}</Text>
 		</View>
 	);
 };
